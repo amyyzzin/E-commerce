@@ -1,5 +1,6 @@
 package com.tistory.amyyzzin.cms.filter;
 
+import com.tistory.amyyzzin.cms.service.seller.SellerService;
 import com.tistory.amyyzzin.config.JwtAuthenticationProvider;
 import com.tistory.amyyzzin.domain.common.UserVo;
 import java.io.IOException;
