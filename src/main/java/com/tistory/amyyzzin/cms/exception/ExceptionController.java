@@ -1,5 +1,6 @@
 package com.tistory.amyyzzin.cms.exception;
 
+import javax.servlet.ServletException;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
@@ -26,7 +27,6 @@ public class ExceptionController {
     @ToString
     @AllArgsConstructor
     public static class ExceptionResponse {
-
         private String message;
         private ErrorCode errorCode;
     }
