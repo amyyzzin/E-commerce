@@ -1,4 +1,4 @@
-package com.tistory.amyyzzin.cms.service;
+package com.tistory.amyyzzin.cms.service.customer;
 
 import com.tistory.amyyzzin.cms.domain.model.Customer;
 import com.tistory.amyyzzin.cms.domain.repository.CustomerRepository;

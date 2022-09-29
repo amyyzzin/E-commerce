@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import com.tistory.amyyzzin.cms.domain.SignUpForm;
 import com.tistory.amyyzzin.cms.domain.model.Customer;
+import com.tistory.amyyzzin.cms.service.customer.SignUpCustomerService;
 import java.time.LocalDate;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

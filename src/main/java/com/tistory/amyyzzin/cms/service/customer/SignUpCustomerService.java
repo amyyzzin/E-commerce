@@ -1,4 +1,4 @@
-package com.tistory.amyyzzin.cms.service;
+package com.tistory.amyyzzin.cms.service.customer;
 
 import static com.tistory.amyyzzin.cms.exception.ErrorCode.ALREADY_VERIFY;
 import static com.tistory.amyyzzin.cms.exception.ErrorCode.EXPIRE_CODE;
@@ -37,7 +37,7 @@ public class SignUpCustomerService {
             .orElseThrow(() -> new CustomException(NOT_FOUND_USER));
         if (customer.isVerify()) {
             throw new CustomException(ALREADY_VERIFY);
-        } else if (customer.getVerificationCode().equals(code)) {
+        } else if (!customer.getVerificationCode().equals(code)) {
             throw new CustomException(WRONG_VERIFICATION);
         } else if (customer.getVerifyExpiredAt().isBefore(LocalDateTime.now())) {
             throw new CustomException(EXPIRE_CODE);
