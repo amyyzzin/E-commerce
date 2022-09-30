@@ -29,8 +29,6 @@ class SignUpCustomerServiceTest {
         assertNotNull(c.getId());
         assertNotNull(c.getCreatedAt());
 
-
-
     }
 
 }
