@@ -12,7 +12,7 @@ Content-Type: application/json
 
 
 ### 이메일 인증 (고객)
-GET http://localhost:8080/signup/customer/verify/?email=amyyzzin@naver.com&code=dN7plJeU0p
+GET http://localhost:8080/signup/customer/verify/?email=amyyzzin@naver.com&code=cM4MIUAR3L
 
 
 ### 로그인(고객)
@@ -28,7 +28,7 @@ Content-Type: application/json
 ### 회원 정보 조회(고객)
 GET http://localhost:8080/customer/getInfo
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NjQ0Njc0MDUsImV4cCI6MTY2NDU1MzgwNX0.SJZh-_GDh9U_5Ytno2q_kFWhbcP7cY7SrKC9bz76C7A
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NjQ1MjQxNjcsImV4cCI6MTY2NDYxMDU2N30.xxnpHkbyZjnpxVNEDrlOSU1DmZL_NvzSQgyHOdds3LA
 
 
 ### 잔액 변경 (고객)
@@ -57,7 +57,7 @@ Content-Type: application/json
 }
 
 ### 이메일 인증 (셀러)
-GET http://localhost:8080/signup/seller/verify/?email=amyyzzin@naver.com&code=u8Cjc6NYeA
+GET http://localhost:8080/signup/seller/verify/?email=amyyzzin@naver.com&code=azm476LWgf
 
 ### 로그인(셀러)
 POST http://localhost:8080/signIn/seller
@@ -67,4 +67,3 @@ Content-Type: application/json
   "email": "amyyzzin@naver.com",
   "password": "string"
 }
-

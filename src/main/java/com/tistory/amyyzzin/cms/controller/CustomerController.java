@@ -6,7 +6,7 @@ import com.tistory.amyyzzin.cms.domain.customer.ChangeBalanceForm;
 import com.tistory.amyyzzin.cms.domain.customer.CustomerDto;
 import com.tistory.amyyzzin.cms.domain.model.Customer;
 import com.tistory.amyyzzin.cms.exception.CustomException;
-import com.tistory.amyyzzin.cms.service.customer.CustomerBalanceService;
+import com.tistory.amyyzzin.cms.service.CustomerBalanceService;
 import com.tistory.amyyzzin.cms.service.customer.CustomerService;
 import com.tistory.amyyzzin.config.JwtAuthenticationProvider;
 import com.tistory.amyyzzin.domain.common.UserVo;
