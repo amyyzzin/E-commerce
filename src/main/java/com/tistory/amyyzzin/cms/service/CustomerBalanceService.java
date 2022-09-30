@@ -1,4 +1,4 @@
-package com.tistory.amyyzzin.cms.service.customer;
+package com.tistory.amyyzzin.cms.service;
 
 import static com.tistory.amyyzzin.cms.exception.ErrorCode.NOT_ENOUGH_BALANCE;
 import static com.tistory.amyyzzin.cms.exception.ErrorCode.NOT_FOUND_USER;
