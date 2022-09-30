@@ -1,5 +1,6 @@
 package com.tistory.amyyzzin.order.service;
 
+import static com.tistory.amyyzzin.order.exception.ErrorCode.NOT_FOUND_ITEM;
 import static com.tistory.amyyzzin.order.exception.ErrorCode.NOT_FOUND_PRODUCT;
 import static com.tistory.amyyzzin.order.exception.ErrorCode.SAME_ITEM_NAME;
 
@@ -8,8 +9,8 @@ import com.tistory.amyyzzin.order.Repository.ProductRepository;
 import com.tistory.amyyzzin.order.domain.model.Product;
 import com.tistory.amyyzzin.order.domain.model.ProductItem;
 import com.tistory.amyyzzin.order.domain.product.AddProductItemForm;
+import com.tistory.amyyzzin.order.domain.product.UpdateProductItemForm;
 import com.tistory.amyyzzin.order.exception.CustomException;
-import java.util.Arrays;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -39,4 +40,14 @@ public class ProductItemService {
         return product;
     }
 
+    @Transactional
+    public ProductItem updateProductItem(Long sellerId, UpdateProductItemForm form) {
+        ProductItem productItem = productItemRepository.findById(form.getId())
+            .filter(pi -> pi.getSellerId().equals(sellerId))
+            .orElseThrow(() -> new CustomException(NOT_FOUND_ITEM));
+        productItem.setName(form.getName());
+        productItem.setCount(form.getCount());
+        productItem.setPrice(form.getPrice());
+        return productItem;
+    }
 }
