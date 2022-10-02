@@ -12,7 +12,7 @@ Content-Type: application/json
 
 
 ### 이메일 인증 (고객)
-GET http://localhost:8080/signup/customer/verify/?email=amyyzzin@naver.com&code=tmmSDdRmrW
+GET http://localhost:8080/signup/customer/verify/?email=amyyzzin@naver.com&code=BoWxVBLXOV
 
 
 ### 로그인(고객)
@@ -57,7 +57,7 @@ Content-Type: application/json
 }
 
 ### 이메일 인증 (셀러)
-GET http://localhost:8080/signup/seller/verify/?email=amyyzzin@naver.com&code=p0PkEvXxIX
+GET http://localhost:8080/signup/seller/verify/?email=amyyzzin@naver.com&code=7E25YIpdrD
 
 ### 로그인(셀러)
 POST http://localhost:8080/signIn/seller
