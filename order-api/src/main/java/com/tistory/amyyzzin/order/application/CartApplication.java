@@ -39,6 +39,11 @@ public class CartApplication {
         return cartService.addCart(customerId, form);
     }
 
+    public Cart updateCart(Long customerId, Cart cart) {
+        cartService.putCart(customerId, cart);
+        return getCart(customerId);
+    }
+
     public Cart getCart(Long customerId) {
 
         Cart cart = refreshCart(cartService.getCart(customerId));
@@ -54,7 +59,7 @@ public class CartApplication {
     }
 
     public void clearCart(Long customerId) {
-        cartService.putCart(customerId,null);
+        cartService.putCart(customerId, null);
     }
 
     private Cart refreshCart(Cart cart) {
@@ -108,7 +113,8 @@ public class CartApplication {
                     cartProductItem.setCount(pi.getCount());
                 }
                 if (isPriceChange && isCountNotEnough) {
-                    tmpMessage.add(cartProductItem.getName() + "가격 변동 및 수량이 부족하여 구매 가능한 최대치로 변경되었습니다.");
+                    tmpMessage.add(
+                        cartProductItem.getName() + "가격 변동 및 수량이 부족하여 구매 가능한 최대치로 변경되었습니다.");
                 } else if (isPriceChange) {
                     tmpMessage.add(cartProductItem.getName() + "가격이 변동되었습니다.");
                 } else if (isCountNotEnough) {
