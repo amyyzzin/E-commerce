@@ -2,6 +2,7 @@ package com.tistory.amyyzzin.order.controller;
 
 import com.tistory.amyyzzin.config.JwtAuthenticationProvider;
 import com.tistory.amyyzzin.order.application.CartApplication;
+import com.tistory.amyyzzin.order.application.OrderApplication;
 import com.tistory.amyyzzin.order.domain.product.AddProductCartForm;
 import com.tistory.amyyzzin.order.domain.redis.Cart;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +22,7 @@ public class CustomerCartController {
 
     //임시코드
     private final CartApplication cartApplication;
+    private final OrderApplication orderApplication;
     private final JwtAuthenticationProvider provider;
 
     @PostMapping
@@ -31,7 +33,7 @@ public class CustomerCartController {
     }
 
     @GetMapping
-    public ResponseEntity<Cart> shopCart(
+    public ResponseEntity<Cart> showCart(
         @RequestHeader(name = "X-AUTH-TOKEN") String token) {
         return ResponseEntity.ok(cartApplication.getCart(provider.getUserVo(token).getId()));
     }
@@ -44,5 +46,12 @@ public class CustomerCartController {
             cartApplication.updateCart(provider.getUserVo(token).getId(), cart));
     }
 
+    @PostMapping("/order")
+    public ResponseEntity<Cart> order(
+        @RequestHeader(name = "X-AUTH-TOKEN") String token,
+        @RequestBody Cart cart) {
+        orderApplication.order(token, cart);
+        return ResponseEntity.ok().build();
+    }
 
 }
