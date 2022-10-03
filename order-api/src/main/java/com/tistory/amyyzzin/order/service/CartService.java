@@ -1,10 +1,10 @@
 package com.tistory.amyyzzin.order.service;
 
 import com.tistory.amyyzzin.order.client.RedisClient;
+import com.tistory.amyyzzin.order.domain.product.AddProductCartForm;
 import com.tistory.amyyzzin.order.domain.redis.Cart;
 import com.tistory.amyyzzin.order.domain.redis.Cart.Product;
 import com.tistory.amyyzzin.order.domain.redis.Cart.ProductItem;
-import com.tistory.amyyzzin.order.domain.product.AddProductCartForm;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -21,7 +21,14 @@ public class CartService {
     private final RedisClient redisClient;
 
     public Cart getCart(Long customerId) {
-        return redisClient.get(customerId, Cart.class);
+        Cart cart = redisClient.get(customerId, Cart.class);
+
+        return cart != null ? cart : new Cart();
+    }
+
+    public Cart putCart(Long custoId, Cart cart) {
+        redisClient.put(custoId, cart);
+        return cart;
     }
 
     public Cart addCart(Long customerId, AddProductCartForm form) {
@@ -29,7 +36,7 @@ public class CartService {
         Cart cart = redisClient.get(customerId, Cart.class);
         if (cart == null) {
             cart = new Cart();
-            cart.setCustomId(customerId);
+            cart.setCustomerId(customerId);
         }
 
         Optional<Product> productOptional = cart.getProducts().stream()
