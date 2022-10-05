@@ -11,9 +11,11 @@ import com.tistory.amyyzzin.cms.service.customer.SignUpCustomerService;
 import com.tistory.amyyzzin.cms.service.seller.SellerService;
 import java.time.LocalDateTime;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class SignUpApplication {
@@ -27,10 +29,16 @@ public class SignUpApplication {
     }
 
     public String customerSignUp(SignUpForm form) {
+
         if (signUpCustomerService.isEmailExist(form.getEmail())) {
             throw new CustomException(ErrorCode.ALREADY_REGISTER_USER);
+        } else if (!signUpCustomerService.isMailPattern(form.getEmail())) {
+            throw new CustomException(ErrorCode.NOT_MATCH_EMAIL_PATTERN);
+        } else if (!signUpCustomerService.isPhonePattern(form.getPhone())) {
+            throw new CustomException(ErrorCode.NOT_MATCH_PHONE_PATTERN);
+        } else if (!signUpCustomerService.isPasswordPattern(form.getPassword())) {
+            throw new CustomException(ErrorCode.NOT_MATCH_PASSWORD_PATTERN);
         } else {
-
             Customer c = signUpCustomerService.signUp(form);
 
             String code = getRandomCode();

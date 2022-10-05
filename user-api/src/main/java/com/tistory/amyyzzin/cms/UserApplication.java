@@ -14,10 +14,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories
 @EnableFeignClients
 @SpringBootApplication
-public class CmsApplication {
+public class UserApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CmsApplication.class, args);
+        SpringApplication.run(UserApplication.class, args);
     }
 
 }
