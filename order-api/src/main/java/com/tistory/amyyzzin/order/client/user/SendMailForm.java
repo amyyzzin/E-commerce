@@ -1,19 +1,21 @@
 package com.tistory.amyyzzin.order.client.user;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
+@Data
 @Getter
-@Setter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class CustomerDto {
+public class SendMailForm {
 
-    private Long id;
-    private String name;
-    private String email;
-    private Integer balance;
+    private String from;
+    private String to;
+    private String subject;
+    private String text;
 
 }

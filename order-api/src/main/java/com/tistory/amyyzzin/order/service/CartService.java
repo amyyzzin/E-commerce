@@ -22,12 +22,11 @@ public class CartService {
 
     public Cart getCart(Long customerId) {
         Cart cart = redisClient.get(customerId, Cart.class);
-
         return cart != null ? cart : new Cart();
     }
 
-    public Cart putCart(Long custoId, Cart cart) {
-        redisClient.put(custoId, cart);
+    public Cart putCart(Long customerId, Cart cart) {
+        redisClient.put(customerId, cart);
         return cart;
     }
 
