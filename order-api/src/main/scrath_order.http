@@ -1,10 +1,10 @@
 ### 상품 추가
 POST http://localhost:8081/seller/product
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IlN1YkhlS1VSUnJlUVkrV1NPbkJrdGc9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjY0ODAzMjg1LCJleHAiOjE2NjQ4ODk2ODV9.645WaMm6B8mufvmQrKoDHYe8RKLKDXWs3IBXUbOsjEE
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjY0ODg0NzIxLCJleHAiOjE2NjQ5NzExMjF9.O347VCJdDBpvlOaQ_E2uLN7AxakJQu1-gTOCc8Apqmg
 
 {
-  "description": "상품 설명",
+  "description": "귀여운 유메의 가을 신상입니다",
   "items": [
     {
       "count": 1,
@@ -18,7 +18,7 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jO
 ### 상품 아이템 추가
 POST http://localhost:8081/seller/product/item
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IlN1YkhlS1VSUnJlUVkrV1NPbkJrdGc9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjY0NzI0OTgzLCJleHAiOjE2NjQ4MTEzODN9.Aq6Q9JEKzMAJYBoLwj2_DilRnvY_vWziiGsnlddz5-k
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjY0ODg0NzIxLCJleHAiOjE2NjQ5NzExMjF9.O347VCJdDBpvlOaQ_E2uLN7AxakJQu1-gTOCc8Apqmg
 
 {
   "productId": 1,
@@ -30,41 +30,41 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jO
 ### 상품 수정
 PUT http://localhost:8081/seller/product
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IlN1YkhlS1VSUnJlUVkrV1NPbkJrdGc9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjY0NzI0OTgzLCJleHAiOjE2NjQ4MTEzODN9.Aq6Q9JEKzMAJYBoLwj2_DilRnvY_vWziiGsnlddz5-k
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjY0ODg0NzIxLCJleHAiOjE2NjQ5NzExMjF9.O347VCJdDBpvlOaQ_E2uLN7AxakJQu1-gTOCc8Apqmg
 
 {
-  "description": "상품 설명",
+  "description": "귀여운 유메의 가을 신상입니다",
   "items": [
     {
       "id": 1,
       "count": 1,
       "name": "유메가을옷",
-      "price": 10000
+      "price": 100000
     }
   ],
-  "id": 1,
+  "id": 3,
   "name": "한정판유메옷"
 }
 
 ### 상품 아이템 수정
 PUT http://localhost:8081/seller/product/item
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IlN1YkhlS1VSUnJlUVkrV1NPbkJrdGc9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjY0NzI0OTgzLCJleHAiOjE2NjQ4MTEzODN9.Aq6Q9JEKzMAJYBoLwj2_DilRnvY_vWziiGsnlddz5-k
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjY0ODg0NzIxLCJleHAiOjE2NjQ5NzExMjF9.O347VCJdDBpvlOaQ_E2uLN7AxakJQu1-gTOCc8Apqmg
 
 {
   "id": 1,
-  "count": 1,
-  "name": "유메가을옷(매우예쁨)",
+  "count": 5,
+  "name": "유메가을옷(따뜻한재질)",
   "price": 10000
 }
 
 ### 상품 삭제
 DELETE http://localhost:8081/seller/product?id=1
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IlN1YkhlS1VSUnJlUVkrV1NPbkJrdGc9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjY0NzI0OTgzLCJleHAiOjE2NjQ4MTEzODN9.Aq6Q9JEKzMAJYBoLwj2_DilRnvY_vWziiGsnlddz5-k
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjY0ODg0NzIxLCJleHAiOjE2NjQ5NzExMjF9.O347VCJdDBpvlOaQ_E2uLN7AxakJQu1-gTOCc8Apqmg
 
 {
-  "description": "상품 설명",
+  "description": "귀여운 유메의 가을 신상입니다",
   "items": [
     {
       "id": 1,
@@ -78,9 +78,9 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jO
 }
 
 ### 상품 아이템 삭제
-DELETE http://localhost:8081/seller/product/item?id=1
+DELETE http://localhost:8081/seller/product/item?id=3
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IlN1YkhlS1VSUnJlUVkrV1NPbkJrdGc9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjY0NzI0OTgzLCJleHAiOjE2NjQ4MTEzODN9.Aq6Q9JEKzMAJYBoLwj2_DilRnvY_vWziiGsnlddz5-k
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjY0ODg0NzIxLCJleHAiOjE2NjQ5NzExMjF9.O347VCJdDBpvlOaQ_E2uLN7AxakJQu1-gTOCc8Apqmg
 
 
 ### 상품 검색
@@ -94,10 +94,10 @@ Content-Type: application/json
 ### 카트 추가
 POST http://localhost:8081/customer/cart
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NjQ3MjUyMDAsImV4cCI6MTY2NDgxMTYwMH0.kUeSvJr27WCEG2QSUiSVQOU-ATeekg6JeDpvHOkEb1s
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NjQ4ODQ3NzcsImV4cCI6MTY2NDk3MTE3N30.znPGaOguuQ0GabmB_XL64mRr67SrrejKF90LbsbdFWk
 
 {
-  "description": "상품 설명",
+  "description": "귀여운 유메의 가을 신상입니다",
   "id": 1,
   "items": [
     {
@@ -114,10 +114,10 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jO
 ### 상품 추가
 POST http://localhost:8081/seller/product
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IlN1YkhlS1VSUnJlUVkrV1NPbkJrdGc9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjY0NzI0OTgzLCJleHAiOjE2NjQ4MTEzODN9.Aq6Q9JEKzMAJYBoLwj2_DilRnvY_vWziiGsnlddz5-k
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjY0ODg0NzIxLCJleHAiOjE2NjQ5NzExMjF9.O347VCJdDBpvlOaQ_E2uLN7AxakJQu1-gTOCc8Apqmg
 
 {
-  "description": "상품 설명",
+  "description": "귀여운 유메의 가을 신상입니다",
   "items": [
     {
       "count": 1,
@@ -131,13 +131,12 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jO
 ### 카트 조회
 GET http://localhost:8081/customer/cart
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NjQ3MjUyMDAsImV4cCI6MTY2NDgxMTYwMH0.kUeSvJr27WCEG2QSUiSVQOU-ATeekg6JeDpvHOkEb1s
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NjQ4ODQ3NzcsImV4cCI6MTY2NDk3MTE3N30.znPGaOguuQ0GabmB_XL64mRr67SrrejKF90LbsbdFWk
 
 ### 카트 주문
 POST http://localhost:8081/customer/cart/order
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NjQ3MjUyMDAsImV4cCI6MTY2NDgxMTYwMH0.kUeSvJr27WCEG2QSUiSVQOU-ATeekg6JeDpvHOkEb1s
-
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NjQ4ODQ3NzcsImV4cCI6MTY2NDk3MTE3N30.znPGaOguuQ0GabmB_XL64mRr67SrrejKF90LbsbdFWk
 
 {
   "customerId": 1,
@@ -146,16 +145,17 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jO
       "id": 1,
       "sellerId": 1,
       "name": "유메옷",
-      "description": "상품 설명",
+      "description": "귀여운 유메의 가을 신상입니다",
       "items": [
         {
           "id": 1,
           "name": "유메가을옷",
-          "count": 1,
-          "price": 1000000
+          "count": 0,
+          "price": 10000
         }
       ]
     }
   ],
   "messages": []
 }
+
