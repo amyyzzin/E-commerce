@@ -4,10 +4,10 @@ Content-Type: application/json
 
 {
   "birth": "1991-01-14",
-  "email": "amyyzzin@naver.com",
+  "email": "popoco1854@naver.com",
   "name": "string",
   "password": "AMYYzzin@123",
-  "phone": "0109228-0921"
+  "phone": "010-0000-0000"
 }
 
 
@@ -21,20 +21,20 @@ Content-Type: application/json
 
 {
   "email": "amyyzzin@naver.com",
-  "password": "string"
+  "password": "AMYYzzin@123"
 }
 
 
 ### 회원 정보 조회(고객)
 GET http://localhost:8080/customer/getInfo
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NjQ5MzkzMjMsImV4cCI6MTY2NTAyNTcyM30.cFidNEggk1wUfZYZ2MVCNxsEvMpAniO0JMatQexuilw
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NjUyMTQxMDAsImV4cCI6MTY2NTMwMDUwMH0.iCtXQY5P5hVo7JjSfISXz5A3-HOZG2o0dupeU5IGxRA
 
 
 ### 잔액 변경 (고객)
 POST http://localhost:8080/customer/balance
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NjQ5MzkzMjMsImV4cCI6MTY2NTAyNTcyM30.cFidNEggk1wUfZYZ2MVCNxsEvMpAniO0JMatQexuilw
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtTFc4Q25jazFUSXFwYXNTOHd1a1ZRSW5jOXdrcGdEM2FnSWRCR0NFa3pzPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NjUyMTQxMDAsImV4cCI6MTY2NTMwMDUwMH0.iCtXQY5P5hVo7JjSfISXz5A3-HOZG2o0dupeU5IGxRA
 
 {
   "from": "amyyzzin@naver.com",
