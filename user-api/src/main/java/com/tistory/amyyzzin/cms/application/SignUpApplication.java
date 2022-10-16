@@ -10,9 +10,11 @@ import com.tistory.amyyzzin.cms.exception.ErrorCode;
 import com.tistory.amyyzzin.cms.service.customer.SignUpCustomerService;
 import com.tistory.amyyzzin.cms.service.seller.SellerService;
 import java.time.LocalDateTime;
+import java.util.Properties;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Slf4j
@@ -23,6 +25,9 @@ public class SignUpApplication {
     private final MailgunClient mailgunClient;
     private final SignUpCustomerService signUpCustomerService;
     private final SellerService sellerService;
+
+    Properties properties = new Properties();
+
 
     public void customerVerify(String email, String code) {
         signUpCustomerService.verifyEmail(email, code);
@@ -44,7 +49,7 @@ public class SignUpApplication {
             String code = getRandomCode();
 
             SendMailForm sendMailForm = SendMailForm.builder()
-                .from("tester@amyyzzin.com")
+                .from((properties.get("senderMail")).toString())
                 .to(form.getEmail())
                 .subject("Verification Email")
                 .text(getVerificationEmailBody(c.getEmail(), c.getName(), "customer", code))
@@ -69,7 +74,7 @@ public class SignUpApplication {
 
             String code = getRandomCode();
             SendMailForm sendMailForm = SendMailForm.builder()
-                .from("tester@amyyzzin.com")
+                .from((properties.get("senderMail")).toString())
                 .to(form.getEmail())
                 .subject("Verification Email")
                 .text(getVerificationEmailBody(s.getEmail(), s.getName(), "seller", code))
@@ -90,7 +95,7 @@ public class SignUpApplication {
         return builder.append("Hello ")
             .append(name)
             .append("! Please Click Link for verification.\n\n ")
-            .append("http://localhost:8080/signup/" + type + "/verify/?email=")
+            .append(properties.get("signUpPath") + type + "/verify/?email=")
             .append(email)
             .append("&code=")
             .append(code).toString();

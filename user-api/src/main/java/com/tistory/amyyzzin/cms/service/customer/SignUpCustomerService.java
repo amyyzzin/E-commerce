@@ -11,7 +11,6 @@ import com.tistory.amyyzzin.cms.domain.repository.CustomerRepository;
 import com.tistory.amyyzzin.cms.exception.CustomException;
 import java.time.LocalDateTime;
 import java.util.Locale;
-import java.util.Optional;
 import java.util.regex.Pattern;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -64,15 +63,13 @@ public class SignUpCustomerService {
 
     @Transactional
     public LocalDateTime changeCustomerValidateEmail(Long customerId, String verificationCode) {
-        Optional<Customer> customerOptional = customerRepository.findById(customerId);
 
-        if (customerOptional.isPresent()) {
-            Customer customer = customerOptional.get();
-            customer.setVerificationCode(verificationCode);
-            customer.setVerifyExpiredAt(LocalDateTime.now().plusDays(1));
-            return customer.getVerifyExpiredAt();
-        }
-        throw new CustomException(NOT_FOUND_USER);
+        Customer customer = customerRepository.findById(customerId)
+            .orElseThrow(() -> new CustomException(NOT_FOUND_USER));
+
+        customer.setVerificationCode(verificationCode);
+
+        return customer.getVerifyExpiredAt();
     }
 
 }
